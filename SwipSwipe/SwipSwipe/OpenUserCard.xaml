@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pck="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="SwipSwipe.OpenUserCard">
+  <ContentView.Content>
+      <StackLayout>
+            <pck:PancakeView CornerRadius="15" Background="{Binding Image}">
+                <pck:PancakeView.GestureRecognizers>
+                    <ClickGestureRecognizer Command="{Binding ViewCard}" />
+                    <TapGestureRecognizer Command="{Binding ViewCard}" />
+                </pck:PancakeView.GestureRecognizers>
+            </pck:PancakeView>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

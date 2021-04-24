@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xtk="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:SwipSwipe"
+             xmlns:effects="clr-namespace:SwipSwipe.Effects;assembly=SwipSwipe"
+             xmlns:pck="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="SwipSwipe.MainPage"
+             BackgroundColor="#EEEEEE">
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="82*" />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Label FontFamily="Artifakt Element" FontSize="27" Text="SwipSwipe" TextColor="#0055FF" Margin="19, 10, 0, 0"/>
+
+            <pck:PancakeView CornerRadius="15" HeightRequest="50" BackgroundColor="White" Margin="19, 37, 19, 0">
+                <pck:PancakeView.Shadow>
+                    <pck:DropShadow BlurRadius="6" Offset="3, 3" />
+                </pck:PancakeView.Shadow>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="Resources/drawable/SearchIcon.png" Margin="15, 15, -3, 11" Scale="1.5"/>
+                    <local:RFEntry Text="Search for your friends" TextColor="#0055FF" FontSize="15" FontFamily="Artifakt Element" />
+                </StackLayout>
+            </pck:PancakeView>
+
+            <local:OpenUserCard />
+
+        </StackLayout>
+        <Image Grid.Row="1" Source="Resources/drawable/NavShape.png" />
+    </Grid>
+
+</ContentPage>
