@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pck="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="SwipSwipe.PostView">
+    <ContentView.Content>
+
+
+        <pck:PancakeView Margin="0, 10, 0, 15" CornerRadius="15" HeightRequest="464" BackgroundColor="White">
+            <pck:PancakeView.Shadow>
+                <pck:DropShadow BlurRadius="6" Offset="3, 3"/>
+            </pck:PancakeView.Shadow>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="357" />
+                    <RowDefinition Height="101" />
+                </Grid.RowDefinitions>
+
+                <pck:PancakeView Grid.Row="0" CornerRadius="15" BackgroundColor="Black" />
+                <pck:PancakeView Grid.Row="1" CornerRadius="15" BackgroundColor="Red" />
+            </Grid>
+            
+        </pck:PancakeView>
+    </ContentView.Content>
+</ContentView>
